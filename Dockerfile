@@ -27,19 +27,7 @@ WORKDIR /app
 
 RUN pip install --no-cache-dir uv
 
-COPY pyproject.toml uv.lock /app/
-COPY apps/api/pyproject.toml /app/apps/api/pyproject.toml
-COPY packages/contracts/pyproject.toml /app/packages/contracts/pyproject.toml
-COPY packages/db/pyproject.toml /app/packages/db/pyproject.toml
-COPY services/module0-discovery/pyproject.toml /app/services/module0-discovery/pyproject.toml
-
-COPY apps/api/src /app/apps/api/src
-COPY packages/contracts/src /app/packages/contracts/src
-COPY packages/db/src /app/packages/db/src
-COPY services/module0-discovery/src /app/services/module0-discovery/src
-COPY scripts /app/scripts
-COPY app.py /app/app.py
-COPY README.md /app/README.md
+COPY . /app
 
 COPY --from=frontend-builder /app/apps/portal/dist /app/apps/portal/dist
 
