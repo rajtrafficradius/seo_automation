@@ -18,3 +18,9 @@ htmlcov/
 .env
 uploads/
 *.log
+tmp/
+tmp-*/
+tmp*/
+tmp-export-check/
+tmp_export_test/
+tmp_blueprint_extract.txt
