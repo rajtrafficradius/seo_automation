@@ -1,0 +1,23 @@
+[tool.uv.workspace]
+members = [
+    "apps/api",
+    "services/module0-discovery",
+    "packages/contracts",
+    "packages/db",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "apps/api/src",
+    "services/module0-discovery/src",
+    "packages/contracts/src",
+    "packages/db/src",
+]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

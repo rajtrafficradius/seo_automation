@@ -1,0 +1,14 @@
+{
+  "name": "tr-seo-automation-system",
+  "private": true,
+  "packageManager": "pnpm@11.1.2",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "scripts": {
+    "dev:portal": "pnpm --filter tr-seo-portal dev",
+    "build:portal": "pnpm --filter tr-seo-portal build"
+  }
+}

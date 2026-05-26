@@ -1,0 +1,16 @@
+{
+  "semrush": {
+    "configured": true,
+    "region_database": "au",
+    "status": "fallback",
+    "data_source": "mock_fallback",
+    "fallback_used": true,
+    "warning_message": "SEMrush data unavailable due to credits/API access issue. Mock fallback data was used for this run.",
+    "keyword_limit": 200,
+    "notes": [
+      "SEMrush data unavailable due to credits/API access issue. Mock fallback data was used for this run.",
+      "Fallback reason: credits."
+    ],
+    "estimated_monthly_traffic": 184
+  }
+}
