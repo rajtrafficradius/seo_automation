@@ -74,6 +74,32 @@ If the backend is not running yet, the frontend still falls back to mock Module 
 docker compose up --build
 ```
 
+## Railway Deployment
+
+This repository is configured for a single Railway service that:
+
+- builds the React frontend during the Docker build
+- copies the built frontend into `apps/portal/dist`
+- serves the full app from FastAPI on the Railway-assigned `PORT`
+
+Required Railway setup:
+
+- deploy from the repository root
+- use the checked-in `railway.json`
+- attach PostgreSQL and Redis services, or provide `DATABASE_URL` and `REDIS_URL`
+- set secrets like `OPENAI_API_KEY` and `SEMRUSH_API_KEY` as Railway variables, not in `.env`
+
+Recommended variables:
+
+- `DATABASE_URL`
+- `REDIS_URL`
+- `OPENAI_API_KEY`
+- `SEMRUSH_API_KEY`
+- `OPENAI_MODEL`
+- `MODULE0_FORCE_MOCK_SEMRUSH`
+- `MODULE0_PERSIST_TO_DB`
+- `CORS_ORIGINS`
+
 ## Module 0 Inputs
 
 The frontend provides:
